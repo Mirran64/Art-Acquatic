@@ -12,11 +12,19 @@ h2.section{
     text-decoration: none;
 }
 
+
 h2.descPage{
     float: right;
-    margin-top: -3%;
+    margin-top: -3.5%;
+    color: white;
+    margin-right: 1%;
 }
 
 hr{
     width: 100%;
+}
+
+header{
+    background-image: url("Hydrocotyle-Tripartita_1024x1024.jpg");
+    background-size: cover;
 }
