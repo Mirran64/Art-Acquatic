@@ -2,3 +2,21 @@ body {
     font-family: "Optima", "Arial narrow", sans-serif;
     
 }
+h2.section{
+    vertical-align: top;
+    text-decoration: underline;
+    margin-top: -4%;
+}
+
+#homeButton{
+    text-decoration: none;
+}
+
+h2.descPage{
+    float: right;
+    margin-top: -3%;
+}
+
+hr{
+    width: 100%;
+}
