@@ -29,15 +29,32 @@ nav{
     margin-top: -22px;
     margin-bottom: -20px;
     padding-top: 5px;
-
+}
+#sezioneMenu ul {
+    float:left;
+    padding:0;
+    margin:0 auto;
+    display:block;
+    list-style-type:none;
 }
 
-#homeButton{
-    text-decoration: none;
+#sezioneMenu li {
+    display:inline; 
+    margin: -2px;
+}
+#sezioneMenu a {
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+    text-align:center;
+    text-decoration:none; 
+    padding:9px 50px;
+    border-bottom:1px solid rgb(0, 0, 0);
 }
 
-button.sezioneMenu{
-
+#sezioneMenu a:hover{
+    border-bottom:1px solid rgb(255, 255, 255);
+    border-right:1px solid rgb(0, 0, 0);
+    border-left:1px solid rgb(0, 0, 0);
 }
 
 main{
