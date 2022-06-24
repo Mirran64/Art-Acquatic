@@ -62,8 +62,8 @@ def change_html_page(iframes:list, iframes_rows: list):
 
 
 if __name__ == "__main__":
-    queries = ["aquascape|green aqua|mulMung|TheCineScaper|SerpaDesign|George Farmer", 
-                "tutorial|SerpaDesign|aquapros|MD Fish Tanks|FERRET WONDERLAND", 
+    queries = ["aquascape", 
+                "tutorial|build|SerpaDesign|aquapros|MD Fish Tanks|FERRET WONDERLAND", 
                 "Paludarium|riparium",
                 "Ecosphere"]
     ids = []
@@ -75,10 +75,10 @@ if __name__ == "__main__":
     ]
 
     iframe_rows = [
-        109, 110, 111, 112, 
-        120, 121, 122, 123,
-        131, 132, 133, 134, 
-        142, 143, 144, 145]
+        114, 115, 116, 117, 
+        125, 126, 127, 128,
+        136, 137, 138, 139, 
+        147, 148, 149, 150]
     
     change_html_page(iframes, iframe_rows)
 
