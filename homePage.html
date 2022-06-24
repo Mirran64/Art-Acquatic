@@ -1,18 +1,22 @@
 <!DOCTYPEHTML>
 <html>
     <head>
-        <title>  ArtsAquatic </title>
+        <title>  homePage </title>
         <meta name="author" content="Matteo Pacifici">
         <meta name="author" content="Andrea Raieta">
         <meta name="author" content="Patryk Choma">
         <meta name="Description" content="A site for all aquarium and aquascape lovers">
-        <meta name="Keywords" content= "fishTank, acquari, acquarium, tropical fish, pesci tropicali, acquascape, fresh water fish, pesci d'acqua dolce, salt water fish, pesci d'acqua salata, iwagumi, dutch acquascape,wabikusa">
+        <meta name="Keywords" content= "fishTank, acquari, acquarium, tropical fish, pesci tropicali, aquascape, fresh water fish, pesci d'acqua dolce, salt water fish, pesci d'acqua salata, iwagumi, dutch aquascape, wabikusa, scape table, piante acquatiche, aquatic plants">
         <link rel="icon" rel="img/png" href="img\p1Icon.png">
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" type="text/css" href="all.css">
         <script type="text/javascript" src="all.js"></script>
+        <script defer src="node_modules/swup/dist/swup.min.js"></script>  
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header role="banner" class="pt-4 pl-1">
@@ -61,8 +65,7 @@
                     
                 </div>
                 <div class="hero-foot"> 
-                    
-                    <nav class="navbar">
+                    <nav class="navbar is-dark">
                         <div class="navbar-brand">
                             <a role="button" class="navbar-burger is-hoverable" arial-laber="menu" aria-expanded="false" data-target="navigationBar">
                                 <span aria-hidden="true"></span>
@@ -72,16 +75,16 @@
                         </div>
                         <div id="navigationBar" class="navbar-menu">
                             <div class="navbar-end">
-                                <a class="navbar-item">
+                                <a class="navbar-item" href="/homePage.html">
                                     Home
                                 </a>
-                                <a class="navbar-item">
+                                <a class="navbar-item" href="/scape_table.html" >
                                     Scape table
                                 </a>
-                                <a class="navbar-item">
+                                <a class="navbar-item" href="/contact_us.html">
                                     Contact Us
                                 </a>
-                                <a class="navbar-item">
+                                <a class="navbar-item" href="/about.html">
                                     About
                                 </a>
                             </div>
@@ -92,7 +95,7 @@
             <h4 class="subtitle is-4 pl-1">Imagine and build your FishTank</h4>     
                
         </nav>
-        <main class="">
+        <main id="swup" class="transition-fade">
             <article class="message is-dark is-pulled-right mt-2">
                 <div class="message-body">
                     <span class="icon is-small">
@@ -159,9 +162,10 @@
                         <address>
                             E-mail: <a class="has-text-info" href="mailto:artsaquatic@gmail.com">artsaquatic@gmail.com</a>
                         </address>
-                    </h4>
+                    </h6>  
                 </div>
                 <img src="img\footerImg250x125.png" alt="ArtsAquatic" width="250" style="display: block;margin-left: auto">
+            </section>
         </footer>
     </body>
 </html>
