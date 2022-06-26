@@ -94,8 +94,66 @@
             </section> 
             <h4 class="subtitle is-4 pl-1">Imagine and build your FishTank</h4>       
         </nav>
-        <main id="swup" class="transition-fade">
+        <main id="swup" class="transition-fade" onload="draw()">
+           <div class="tile is-ancestor is-vertical m-2">
+                <div class="tile">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <h4 class="title is-4"><strong>Colors</strong></h4>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: lightGreen ;border: 3px solid lightgrey" onclick="setColor(`144`,`238`,`144`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: Green ;border: 3px solid lightgrey" onclick="setColor(`0`,`128`,`0`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: lightcoral ;border: 3px solid lightgrey" onclick="setColor(`240`,`128`,`128`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: red ;border: 3px solid lightgrey" onclick="setColor(`255`,`0`,`0`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: burlywood ;border: 3px solid lightgrey" onclick="setColor(`222`,`184`,`135`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: brown ;border: 3px solid lightgrey" onclick="setColor(`165`,`42`,`42`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: lightgray ;border: 3px solid lightgrey" onclick="setColor(`211`,`211`,`211`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: grey ;border: 3px solid lightgrey" onclick="setColor(`128`,`128`,`128`)"></button>
+                            <button class="button is-medium is-rounded mr-2 mt-1"  style="background-color: white ;border: 3px solid lightgrey" onclick="setColor(`255`,`255`,`255`)"></button>
 
+                            <input type="color" class="mr-2 mt-1" style="height:50px;" oninput="setColorHex(this.value , opacity)">
+                            <h4 class="title is-4 mt-2"><strong>Line Width - Opacity - Line Cap</strong></h4>
+                            <input type="range" min="1" max="30" id="lineWidth" value="1" oninput="lineWidth = this.value"> 
+                            <input type="number"  class="ml-2 mr-2" onchange="setOneNumberDecimal" min="0.0" max="1.0" id="Opacity" step="0.1" value="1" oninput="setOpacity(this.value)">
+                            <button class="button is-small is-rounded" onclick="setCap(1)">
+                                <span class="icon is-small">
+                                    <i class="fas fa-square"  aria-hidden="true"></i>
+                                </span>
+                            </button>
+                            <button class="button is-small is-rounded" onclick="setCap(0)">
+                                <span class="icon is-small">
+                                    <i class="fas fa-circle"  aria-hidden="true"></i>
+                                </span>
+                            </button> 
+                        </div>        
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child  box">
+                            <article class="message is-danger is-pulled-right ">
+                                <div class="message-body">
+                                    Warning: if you resize the Table you will lose your work!
+                                </div>
+                            </article>
+                            <h4 class="title is-4 mt-1"><strong>Choose the table size </strong></h4>
+                            <h5 class="subtitle is-5">Width -- Height</h4>
+                            <input id="tableWidth" type="number" min="100" max="3000" step="100" value="1000" oninput="setWidth(this.value)"> 
+                            --
+                            <input id="tableHeight" type="number" min="100" max="3000" step="100" value="500" oninput="setHeight(this.value)">
+                            
+                            <br>
+                            <br>
+                            <h4 class="title is-4 mt-1"><strong>Undo last change or Clear the Table </strong></h4>
+                            <button class="button is-medium" onclick="undoLast()">Undo</button>
+                            <button class="button is-medium" onclick="clearTable()">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <canvas id="canvas" style="border: 2px solid black">Your browser does not support a canvas object.</canvas>
+                        <script defer type="text/javascript" src="canvas.js"></script>
+                    </div>
+                </div>
+            </div>        
         </main>
         <aside>    
         </aside>

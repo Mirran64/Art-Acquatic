@@ -34,8 +34,7 @@ def get_video_ids(query: str):
         part="snippet",
         maxResults=4,
         q=query,
-        order="relevance",
-        regionCode="us",
+        order="relevance",    
         type="video"
     )
     response = request.execute()
@@ -63,7 +62,7 @@ def change_html_page(iframes:list, iframes_rows: list):
 
 if __name__ == "__main__":
     queries = ["aquascape", 
-                "tutorial|build|SerpaDesign|aquapros|MD Fish Tanks|FERRET WONDERLAND", 
+                "tutorial|build|SerpaDesign|aquapros|MD Fish Tanks|FERRET WONDERLAND|green aqua|ada", 
                 "Paludarium|riparium",
                 "Ecosphere"]
     ids = []
